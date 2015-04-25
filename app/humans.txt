@@ -1,0 +1,15 @@
+/* TEAM */
+  Developer: Vojta Staněk
+  Site: stanekv.eu
+  Twitter: @VojtaStanek
+  Location: Prague, Czech republic
+
+/* THANKS */
+
+  Františka Tranová
+
+/* SITE */
+  Last update: RRRR/MM/DD
+  Standards: HTML5, CSS3
+  Components: Gulp, Sass
+  Software: Atom Editor, Ubuntu

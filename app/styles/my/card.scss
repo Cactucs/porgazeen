@@ -1,0 +1,48 @@
+ul {
+	text-align: center;
+}
+
+li.card {
+	$width: 200px;
+	$ratio: 1.41428571429;
+	position: relative;
+	display: inline-block;
+	width: $width;
+	height: $width * $ratio;
+	vertical-align: top;
+	background-color: #fff;
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+	overflow: hidden;
+	margin: 10px;
+
+	&::before {
+		content: '';
+	}
+
+	img {
+		position: absolute;
+		top: 0;
+		//left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+	}
+
+	span {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 10px;
+		color: white;
+
+		@mixin all-shadow($h, $blur, $color) {
+			text-shadow:
+				#{-$h} 0 $blur $color,
+				#{$h} 0 $blur $color,
+				0 #{-$h} $blur $color,
+				0 #{$h} $blur $color;
+		}
+
+		@include all-shadow(1px, 1px, invert(white));
+	}
+}
