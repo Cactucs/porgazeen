@@ -72,6 +72,13 @@ gulp.task('copy', function () {
     .pipe($.size({title: 'copy'}));
 });
 
+// Compy files in folder files
+gulp.task('files', function () {
+  return gulp.src(['app/files/**/*'])
+    .pipe(gulp.dest('dist/files'))
+    .pipe($.size({title: 'files'}));
+});
+
 // Copy web fonts to dist
 gulp.task('fonts', function () {
   return gulp.src(['app/fonts/**'])
@@ -118,8 +125,7 @@ gulp.task('html', function () {
     //       the next line to only include styles your project uses.
     .pipe($.if('*.css', $.uncss({
       html: [
-        'app/index.html',
-        'app/styleguide.html'
+        'app/index.html'
       ],
       // CSS Selectors for UnCSS to ignore
       ignore: [
@@ -178,7 +184,7 @@ gulp.task('serve:dist', ['default'], function () {
 
 // Build production files, the default task
 gulp.task('default', ['clean'], function (cb) {
-  runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'copy'], cb);
+  runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'copy', 'files'], cb);
 });
 
 // Run PageSpeed Insights
