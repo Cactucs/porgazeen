@@ -3,7 +3,7 @@
 
   var querySelector = document.querySelector.bind(document);
   var request = new XMLHttpRequest();
-  request.open('GET', '/files/list.json', true);
+  request.open('GET', 'http://storage.porgazeen.stanekv.eu/list.json', true);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {

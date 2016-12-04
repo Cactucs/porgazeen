@@ -1,0 +1,12 @@
+src_folder: app
+dist_folder: dist
+scripts:
+  - app/scripts/**/*.js
+styles:
+  - app/styles/main.scss
+templates:
+  - app/index.html
+static:
+  - app/humans.txt
+  - app/robots.txt
+  - app/fonts/**/*
